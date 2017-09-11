@@ -1,0 +1,49 @@
+---
+title: "oldcqs"
+author: "Sigurður Þór Jónsson"
+output: html_document
+---
+
+# Old ICES quality control sheets (oldqcs)
+
+Quality control of stock assessments performed by ICES expert working
+groups was introduced in simple form in the last decade of the last
+century. After consensus on an assessment was reached in a working group, and when report
+text, tables and figures for a stock were ready, a stock expert was
+generally happy to fill out the so called quality control sheet (QCS).
+
+Old ICES QCS formed the basis of presentation on
+the ICES annual science conference in Bruegge in 2000 ([ICES
+C.M. 2000/X:9]()http://www.hafro.is/sigurdur/.
+
+These sheets have been superceded by the ICES Stock Assessment
+Summaries worksheet (courtesy of M. Pastoors), also maintained on the
+ICES-network. The sheet contains a selection of data from the official ICES Standard Graphs and Tables data base, and can be refreshed programmatically (courtesy of Ernesto Jardim).
+
+On this site:
+
+* Data used in ICES CM2000/X:9 are available as an [Splus datadump](qcs-dump/dumpdataOldStyle), along with an R-script (contained in this github-README.Rmd) for converting them to a format comparable to the one used in the ICES stock summary database. In addition this directory contains text files giving the recruitment age for the stocks, as there cases of missing value for the recruitment age, or of a change in the age used as that of recruitment. Further, 'Cod on the Icelandic grounds' was not included in ICES CM 2000/X:9, to remedy this the retrospective lower diagonal matrices for 'Fmor', 'FSB (4+)', 'SSB' and 'Recruitment' are given as an [XL-sheet](qcs-dump/cod-iceg-qcs.xlsx). Note that to collect the most comprehensive set of data it would probably be best to access the latest available qcs-docs off a the ICES network, and use the method of saving the QCSs as xls-files with the necessary cleaning of extreneous material in the data fields (instead of trying to repeat primitive Splus scraping of the data from txt-representations of the QCS as was done in 1999 and 2000).
+
+* Copies of the [ICES Quality Control Sheets](qcs-docs/README.html) anno ~2003--2004, lifted of the ICES Server, could perhaps be used to create continuous stock assessment summaries starting at ~1990 assessents or as described above preferentially these should be updated if possible.
+
+* A copy of the ICES SS DB as an [xls-file](ices-ss-db/ICES Assessment Summary database 20160303.xlsx), from the ICES Training course in the R-environment 2016, retrieved on 2016-04-08.
+
+## Some terminology to aid in the timing of assessments and their extents.
+
+The terms _'contemporary'_ or _'contemporaneous'_ could be used for 'the assessment
+at the time' of estimates or predictions of stock parameters of
+interest at specific times, close to the end of the assessment year
+range, i.e. in the:
+
+* __terminal year__: Parameter of interest fishing mortality.
+
+* __assesment year__: Parameters of interest, SSB and recruitment, also for performance of management regime fishing mortality, possibly taking into account over/undershoot in landings compared to that used by the expert group in the short term prediction.
+
+* __advisory year__: The year for which the advice is supposed to hold. Biomass and/or recruitment at the start of this year might be of interest in conjunction with the performance of predcting the fishing mortality in the assessment year.  
+
+* __prediction year__: Performance in predicting biomass of most interest especially for stocks with harvest control rules that are adhered to. Possibly also in relation to the fishing mortality/harvest rate in the advisory year. 
+
+The contemporaneous parameters are then compared to more recent (and at least in a VPA-sense more reliable) or current estimates as differences, ratios, or log ratios.
+
+Allowance for catches in excess of or less than assumed landings in the assessment year and the TAC in the advisory year could be accounted for in some way, possibly with simple ratio muliplier approach in the case of retrospective analysis of fishing mortality estimation.
+
